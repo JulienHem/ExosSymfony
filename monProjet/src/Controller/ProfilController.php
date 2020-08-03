@@ -5,12 +5,10 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
 /**
  * @Route("/profil")
  * @method render(string $string, array $array)
  */
-
 class ProfilController extends AbstractController
 {
     /**
@@ -18,11 +16,11 @@ class ProfilController extends AbstractController
      */
     public function detail() :Response
     {
-        // affichage de la page d'accueil
-        $info = ['Loper', 'Dave', 'daveloper@code.dom', '01/01/1970'];
+        $info = ['lastname' => 'Loper', 'firstname' => 'Dave', 'email' => 'daveloper@code.dom', 'birthdate' => '01/01/1970'];
 
-        return $this->render('profil/detail.html.twig', ['info' => $info]);
+        // affichage de la page d'accueil
+        return $this->render('profil/detail.html.twig', [
+            'informations' => $info
+        ]);
     }
 }
-
-

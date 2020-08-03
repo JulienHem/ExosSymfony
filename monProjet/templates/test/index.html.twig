@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table class="table table-light table-hover">
+    <thead>
+    <tr>
+        <th>Id du produit</th>
+        <th>Nom</th>
+        <th>Id Fournisseur</th>
+        <th>Id Catégorie</th>
+        <th>Quantité par unité</th>
+        <th>Prix Unitaire</th>
+        <th>Unités en stock</th>
+        <th>Unités en commande</th>
+        <th>Niveau d'alerte</th>
+        <th>Discontinued</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for obj in obj %}
+    <tr>
+        <th>{{ obj.id }}</th>
+        <th>{{ obj.name }}</th>
+        <th>{{ obj.suppliers.name}}</th>
+        <th>{{ obj.CatId }}</th>
+        <th>{{ obj.QtePerUnit}}</th>
+        <th>{{ obj.UnitPrice}}</th>
+        <th>{{ obj.UnitIS}}</th>
+        <th>{{ obj.UnitOO}}</th>
+        <th>{{ obj.Reorder}}</th>
+        <th>{{ obj.Discontinued }}</th>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+
+</table>
+
+   {% endblock %}
+    {% block javascripts %}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{% endblock %}
