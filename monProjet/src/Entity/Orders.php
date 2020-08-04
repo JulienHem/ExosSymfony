@@ -13,11 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Orders
 {
     /**
-     * @ORM\Column(name="OrderID", type="integer", nullable=false)
+     * @ORM\Column(name="ProductID", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
+
 
     /**
      * @ORM\Column(type="integer")
@@ -40,7 +42,7 @@ class Orders
     private $ShippedDate;
 
     /**
-     * @ORM\Column(type="string", length="255")
+     * @ORM\Column(type="integer")
      */
     private $ShipVia;
 
@@ -78,6 +80,15 @@ class Orders
      * @ORM\Column(type="string", length=255)
      */
     private $ShipCountry;
+
+    /**
+     * @var \Customers
+     *
+     * @ORM\ManyToOne(targetEntity="Customers")
+     * @ORM\JoinColumn(name="CustomerID", referencedColumnName="CustomerID")
+     *
+     */
+    private $customers;
 
     /**
      * @return mixed
@@ -285,6 +296,19 @@ class Orders
     public function setShipCountry($ShipCountry): void
     {
         $this->ShipCountry = $ShipCountry;
+    }
+
+
+    public function getCustomers(): ?Customers
+    {
+        return $this->customers;
+    }
+
+    public function setCustomers(?Customers $customers): self
+    {
+        $this->customers = $customers;
+
+        return $this;
     }
 
 }

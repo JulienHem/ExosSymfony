@@ -13,8 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Products
 {
 
-
-
     /**
      * @ORM\Column(name="ProductId", type="integer", nullable=false)
      * @ORM\Id
@@ -240,8 +238,8 @@ class Products
     /**
      * @var \Suppliers
      *
-     * @ORM\ManyToOne(targetEntity="Suppliers", inversedBy="Products")
-     * @ORM\JoinColumn(name="SupplierId", referencedColumnName="SupplierId")
+     * @ORM\ManyToOne(targetEntity="Suppliers")
+     * @ORM\JoinColumn(name="SupplierID", referencedColumnName="SupplierId")
      *
      */
     private $suppliers;
@@ -259,45 +257,25 @@ class Products
     }
 
     /**
-     * @var \OrderDetails
+     * @var \Orders
      *
-     * @ORM\ManyToOne(targetEntity="OrderDetails", inversedBy="Products")
-     * @ORM\JoinColumn(name="ProductID", referencedColumnName="CustomerID")
+     * @ORM\ManyToOne(targetEntity="Orders")
+     * @ORM\JoinColumn(name="ProductID", referencedColumnName="ProductID")
      *
      */
-    private $orderdetails;
+    private $orders;
 
-    public function getOrderDetails(): ?Suppliers
+    public function getOrders(): ?Orders
     {
-        return $this->orderdetails;
+        return $this->orders;
     }
 
-    public function setOrderDetails(?Suppliers $orderdetails): self
+    public function setOrders(?Orders $orders): self
     {
-        $this->suppliers = $orderdetails;
+        $this->orders = $orders;
 
         return $this;
     }
 
-    /**
-     * @var \Customers
-     *
-     * @ORM\ManyToOne(targetEntity="Customers", inversedBy="Products")
-     * @ORM\JoinColumn(name="CustomerID", referencedColumnName="CustomerID")
-     *
-     */
-    private $customers;
-
-    public function getCustomers(): ?Suppliers
-    {
-        return $this->customers;
-    }
-
-    public function setCustomers(?Suppliers $customers): self
-    {
-        $this->suppliers = $customers;
-
-        return $this;
-    }
 
 }

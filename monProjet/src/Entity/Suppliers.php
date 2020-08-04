@@ -42,32 +42,5 @@ class Suppliers
         return $this;
     }
 
-    /**
-     * @ORM\OneToMany(targetEntity="Products", mappedBy="supplier", orphanRemoval=true)
-     */
-    private $products;
-
-    public function __construct()
-    {
-        $this->products = new ArrayCollection();
-    }
-
-    public function getProducts(): Collection
-    {
-        return $this->products;
-    }
-
-    public function addProducts(Products $products): self
-    {
-        if (!$this->products->contains($products)) {
-            $this->products[] = $products;
-            $products->setSuppliers($this);
-        }
-
-        return $this;
-    }
 
 }
-
-
-

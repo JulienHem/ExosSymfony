@@ -9,12 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="Order Details")
+ * @ORM\Table(name="OrderDetails")
  */
 class OrderDetails
 {
     /**
-     * @ORM\Column(name="CustomerID", type="integer", nullable=false)
+     * @ORM\Column(name="OrderID", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -81,6 +81,26 @@ class OrderDetails
         $this->Quantity = $Quantity;
     }
 
+    /**
+     * @var \Orders
+     *
+     * @ORM\ManyToOne(targetEntity="Orders")
+     * @ORM\JoinColumn(name="OrderID", referencedColumnName="OrderID")
+     *
+     */
+    private $orders;
+
+    public function getOrders(): ?Orders
+    {
+        return $this->orders;
+    }
+
+    public function setOrders(?Orders $orders): self
+    {
+        $this->orders = $orders;
+
+        return $this;
+    }
 
 }
 
