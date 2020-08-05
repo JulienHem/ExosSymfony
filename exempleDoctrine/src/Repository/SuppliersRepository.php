@@ -20,15 +20,15 @@ class SuppliersRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Suppliers[] Returns an array of Suppliers objects
+    //  * @return Suppliers[] Returns an array of Products objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('s.id', 'ASC')
+            ->orderBy('p.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -37,10 +37,10 @@ class SuppliersRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Suppliers
+    public function findOneBySomeField($value): ?Products
     {
-        return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

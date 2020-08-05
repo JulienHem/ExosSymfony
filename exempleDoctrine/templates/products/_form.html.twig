@@ -1,4 +1,51 @@
-{{ form_start(form) }}
-   {{ form_row(form.ProductName) }}
-<button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<div class="row">
+    <div class="col-6">
+        {{ form_row(form.ProductName) }}
+    </div>
+    <div class="col-6">
+
+        {{ form_row(form.SupplierID) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+
+        {{ form_row(form.CategoryID) }}
+    </div>
+    <div class="col-4">
+
+        {{ form_row(form.QuantityPerUnit) }}
+    </div>
+    <div class="col-4">
+        {{ form_row(form.UnitPrice) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        {{ form_row(form.UnitsInStock) }}
+    </div>
+    <div class="col-4">
+        {{ form_row(form.UnitsOnOrder) }}
+    </div>
+    <div class="col-4">
+        {{ form_row(form.ReorderLevel) }}
+    </div>
+</div>
+{{ form_row(form.Discontinued) }}
+
+
+<div class="row">
+
+    <div class="col-6 d-flex justify-content-around">
+        <a class="btn btn-secondary text-align-center" href="{{ path('products_index') }}">Retour à la liste</a>
+    </div>
+
+    <div class="col-6 d-flex justify-content-around">
+
+            <button class="btn btn-primary d-flex justify-content-center">{{ button_label|default('Sauvegarder') }}</button>
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+

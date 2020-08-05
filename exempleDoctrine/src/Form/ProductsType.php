@@ -3,10 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Products;
+use App\Entity\Suppliers;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\Validator\Constraints\Regex;
 
 class ProductsType extends AbstractType
@@ -16,6 +20,7 @@ class ProductsType extends AbstractType
         $builder
             ->add('ProductName', TextType::class,[
                 'label' => 'Nom du produit',
+                'help' => 'Indiquez le nom complet du produit',
                 'attr' => [
                     'placeholder' => 'Produit',
                     ],
@@ -24,21 +29,17 @@ class ProductsType extends AbstractType
                         'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
                         'message' => 'Caratère(s) non valide(s)'
                     ]),
-                    'help' => 'Vous devez rentrer le nom du produit ici',
                 ]
             ])
 
-            ->add('SupplierID' , TextType::class,[
+            ->add('SupplierID' , EntityType::class,[
+                'class' => Suppliers::class,
                 'label' => 'Nom du fournisseur',
-                'attr' => [
-                    'placeholder' => '',
-                ],
                 'constraints' => [
                     new Regex([
                         'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
                         'message' => 'Fournisseur non valide'
                     ]),
-                    'help' => 'Veuillez choisir un fournisseur',
                 ]
             ])
             ->add('CategoryID', TextType::class,[
@@ -48,10 +49,9 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Caratère(s) non valide(s)'
                     ]),
-                    'help' => 'Ce n est pas la bonne catégorie',
                 ]
             ])
             ->add('QuantityPerUnit', TextType::class,[
@@ -61,10 +61,9 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Mauvaise quantité'
                     ]),
-                    'help' => 'Quantité rentrée non valide',
                 ]
             ])
             ->add('UnitPrice', TextType::class,[
@@ -74,10 +73,9 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Prix incorrect'
                     ]),
-                    'help' => 'Le prix saisi est incorrect',
                 ]
             ])
             ->add('UnitsInStock' , TextType::class,[
@@ -87,10 +85,9 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Quantité non valide)'
                     ]),
-                    'help' => 'Vous devez rentrer le nom du produit ici',
                 ]
             ])
             ->add('UnitsOnOrder' , TextType::class,[
@@ -100,10 +97,9 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Quantité non valide)'
                     ]),
-                    'help' => 'Vous devez rentrer une quantité valide ici',
                 ]
             ])
             ->add('ReorderLevel' , TextType::class,[
@@ -113,14 +109,27 @@ class ProductsType extends AbstractType
                 ],
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '/^[0-9]*$/',
                         'message' => 'Quantité non valide)'
                     ]),
-                    'help' => 'Veuillez rentrer un niveau correct',
                 ]
             ])
-            ->add('Discontinued')
+            ->add('Discontinued', TextType::class)
 
+            ->add('picture2', FileType::class, [
+                'label' => 'Photo de profil',
+                //unmapped => fichier non associé à aucune propriété d'entité, validation impossible avec les annotations
+                'mapped' => false,
+                // pour éviter de recharger la photo lors de l'édition du profil
+                'required' => false,
+                'constraints' => [
+                    new Image([
+                        'maxSize' => '2000k',
+
+                        'mimeTypesMessage' => 'Veuillez insérer une photo au format jpg, jpeg ou png'
+                    ])
+                ]
+            ])
         ;
     }
 
