@@ -11,22 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e7fdbe3-0370-4bf9-b112-c65c751bf2b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804092328.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804113407.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804115741.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804121122.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804131605.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804133124.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135537.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135634.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135758.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200805144702.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Controller/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Controller/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Form/ProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Form/ProductsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +168,7 @@
       <workItem from="1596609084102" duration="14735000" />
       <workItem from="1596628154377" duration="46000" />
       <workItem from="1596628208643" duration="6839000" />
-      <workItem from="1596696000329" duration="16943000" />
+      <workItem from="1596696000329" duration="17279000" />
     </task>
     <servers />
   </component>

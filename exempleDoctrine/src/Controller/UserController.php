@@ -96,7 +96,4 @@ class UserController extends AbstractController
     }
 }
 
-class Userint implements UserInterface {
 
-
-}
