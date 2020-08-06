@@ -37,7 +37,7 @@ class ProductsType extends AbstractType
                 'label' => 'Nom du fournisseur',
                 'constraints' => [
                     new Regex([
-                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
+                        'pattern' => '',
                         'message' => 'Fournisseur non valide'
                     ]),
                 ]

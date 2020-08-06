@@ -34,6 +34,8 @@
 </div>
 {{ form_row(form.Discontinued) }}
 
+{{ form_row(form.picture2) }}
+
 
 <div class="row">
 
@@ -43,9 +45,9 @@
 
     <div class="col-6 d-flex justify-content-around">
 
-            <button class="btn btn-primary d-flex justify-content-center">{{ button_label|default('Sauvegarder') }}</button>
-        </div>
+        <button class="btn btn-primary d-flex justify-content-center">{{ button_label|default('Sauvegarder') }}</button>
     </div>
+</div>
 
-    {{ form_end(form) }}
+{{ form_end(form) }}
 

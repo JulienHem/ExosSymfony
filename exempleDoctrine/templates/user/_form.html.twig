@@ -1,0 +1,32 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-12">
+        {{ form_row(form.email) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        {{ form_row(form.mdp) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        {{ form_row(form.role) }}
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-6 d-flex justify-content-around">
+        <a class="btn btn-secondary text-align-center" href="{{ path('user_index') }}">Retour à la liste</a>
+    </div>
+
+    <div class="col-6 d-flex justify-content-around">
+
+        <button class="btn btn-primary d-flex justify-content-center">{{ button_label|default('Sauvegarder') }}</button>
+    </div>
+</div>
+
+{{ form_end(form) }}

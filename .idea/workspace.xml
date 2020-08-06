@@ -12,20 +12,21 @@
   <component name="ChangeListManager">
     <list default="true" id="8e7fdbe3-0370-4bf9-b112-c65c751bf2b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804092328.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804113407.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804115741.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804121122.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804131605.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804133124.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135537.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135634.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200804135758.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exempleDoctrine/migrations/Version20200805144702.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Controller/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Controller/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Controller/SuppliersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Entity/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Entity/Suppliers.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Entity/Suppliers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Form/ProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Form/ProductsType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/src/Repository/SuppliersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/src/Repository/SuppliersRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/products/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/exempleDoctrine/templates/products/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exempleDoctrine/templates/suppliers/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +182,7 @@
       <workItem from="1596609084102" duration="14735000" />
       <workItem from="1596628154377" duration="46000" />
       <workItem from="1596628208643" duration="6839000" />
+      <workItem from="1596696000329" duration="16943000" />
     </task>
     <servers />
   </component>
@@ -204,18 +206,26 @@
       <screen x="1920" y="-851" width="1080" height="1880" />
     </state>
     <state x="1920" y="-256" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596187321304" />
+    <state x="2190" y="-156" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596707073522">
+      <screen x="1920" y="-851" width="1080" height="1880" />
+    </state>
+    <state x="2190" y="-156" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596707073522" />
     <state x="2237" y="1" key="ComposerInitDialogKey" timestamp="1596190619353">
       <screen x="1920" y="-851" width="1080" height="1880" />
     </state>
     <state x="2237" y="1" key="ComposerInitDialogKey/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596190619353" />
-    <state x="2295" y="12" key="NewPhpFileDialog" timestamp="1596461495727">
+    <state x="2162" y="-188" key="NewPhpClassDialog" timestamp="1596706128253">
       <screen x="1920" y="-851" width="1080" height="1880" />
     </state>
-    <state x="2295" y="12" key="NewPhpFileDialog/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596461495727" />
-    <state x="1961" y="-266" key="SettingsEditor" timestamp="1596628460192">
+    <state x="2162" y="-188" key="NewPhpClassDialog/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596706128253" />
+    <state x="2295" y="12" key="NewPhpFileDialog" timestamp="1596705565740">
       <screen x="1920" y="-851" width="1080" height="1880" />
     </state>
-    <state x="1961" y="-266" key="SettingsEditor/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596628460192" />
+    <state x="2295" y="12" key="NewPhpFileDialog/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596705565740" />
+    <state x="1961" y="-266" key="SettingsEditor" timestamp="1596716249446">
+      <screen x="1920" y="-851" width="1080" height="1880" />
+    </state>
+    <state x="1961" y="-266" key="SettingsEditor/0.0.1920.1040/1920.-851.1080.1880@1920.-851.1080.1880" timestamp="1596716249446" />
     <state x="2277" y="3" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596628676516">
       <screen x="1920" y="-851" width="1080" height="1880" />
     </state>
