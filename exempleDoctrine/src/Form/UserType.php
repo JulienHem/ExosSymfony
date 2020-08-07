@@ -29,7 +29,7 @@ class UserType extends AbstractType
                     ]),
                 ]
             ])
-            ->add('mdp' , PasswordType::class,[
+            ->add('password' , PasswordType::class,[
                 'label' => 'Mot de passe',
                 'help' => '',
                 'attr' => [
@@ -42,12 +42,11 @@ class UserType extends AbstractType
                     ]),
                 ]
             ])
-            ->add('role' , EntityType::class,[
-                'class' => User::class,
+            ->add('role' , TextType::class,[
                 'label' => "Rôle de l'utilisateur",
                 'constraints' => [
                     new Regex([
-                        'pattern' => '',
+                        'pattern' => '/^[A-Za-zéèàçâêûîôäëüïö\_\-\s]+$/',
                         'message' => 'Rôle non valide'
                     ]),
                 ]

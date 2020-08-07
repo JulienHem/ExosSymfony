@@ -26,7 +26,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $mdp;
+    private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -50,14 +50,15 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getMdp(): ?string
+    public function getPassword(): ?string
     {
-        return $this->mdp;
+
+        return (string)$this->password;
     }
 
-    public function setMdp(string $mdp): self
+    public function setPassword(string $password): self
     {
-        $this->mdp = $mdp;
+        $this->password = $password;
 
         return $this;
     }
@@ -76,26 +77,26 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        if ($this->role == "administrateur")
+            return ["ROLE_ADMIN"];
+        if ($this->role == "user")
+            return ["ROLE_USER"];
+        return [];
     }
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+        return "";
     }
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
-    }
+        return $this->getEmail();
+ }
 
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
     }
 
-    public function getPassword()
-    {
-        // TODO: Implement getPassword() method.
-    }
 }
